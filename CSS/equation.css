@@ -1,0 +1,223 @@
+* {
+    font-size: 30px;
+}
+
+html, body {
+    background-image: linear-gradient(to bottom right, #38A2D7, #561139);
+    background-repeat: no-repeat;
+    font-family: Tahoma, sans-serif;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    color: white;
+}
+
+header {
+    height: fit-content;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+}
+
+.header-link {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #0e6fa0;
+    text-transform: uppercase;
+}
+
+.logo:hover {
+    transition: transform .3s ease-in-out;
+    transform: scale(1.2);
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link a {
+    padding: 10px;
+    color: #561139;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+span {
+    text-transform: lowercase;
+}
+
+.link a:hover, .link a:active {
+        background-color: #561139;
+        color: white;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.container1 {
+    position: absolute;
+    max-width: 800px;
+    margin: -50px auto 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    background-image: linear-gradient(to bottom rigt, #0093E9, #80D0C7);
+    border-radius: 5px;
+    text-align: center;
+    animation-name: opacity;
+    animation-duration: .5s;
+}
+
+.reponse-container {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    top: 0;
+    width: 500px;
+    height: 200px;
+    overflow: auto;
+    margin: 100px auto;
+}
+
+.reponse-content {
+    position: relative;
+    background-color: whitesmoke;
+    color: rgba(0, 0, 0, .7);
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+.close {
+    position: absolute;
+    background-color: #fefefe;
+    top: 5px;
+    right: 5px;
+    padding: 0;
+    border: 1px solid #888;
+    width: 30px;
+    height: 30px;
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+label {
+    opacity: .7;
+}
+
+.title h2 {
+    margin-top: 0;
+}
+
+.equation1, .equation2, .equation3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input {
+    background-color: whitesmoke;
+    border-style: none;
+    font-size: 25px;
+    text-align: right;
+    width: 60px;
+}
+
+#inputAfterEqual1, #inputAfterEqual2, #inputAfterEqual3, .resultContainer input {
+    text-align: left;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    border-style: none;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: .6;
+    text-transform: uppercase;
+    transition: background-color .2s;
+}
+
+button:hover {
+    background-color: rgb(155, 152, 152);
+    color: white;
+}
+
+.resultContainer input {
+    width: 100px;
+    background-color: rgb(245, 239, 239);
+}
+
+
+@media only screen and (max-width:750px) {
+    * {
+        font-size: 17px;
+    }
+    
+    body {
+        padding: 10px;
+    }
+
+    .container1 {
+        margin: 20px 0;
+    }  
+
+    .title h2{
+        font-size: 15px;
+    }
+
+    input{
+        width: 40px;
+        font-size: 15px;
+    }
+
+    button {
+        font-size: 13px;
+        margin: 0 10px 10px 10px;
+        padding: 5px;
+    }
+
+    .otherButton {
+        margin-top: 10px;
+    }
+
+    .resultContainer input {
+        font-size: 15px;
+        width: 50px;
+    }
+
+    #resultInput {
+        width: 250px;
+    }
+}

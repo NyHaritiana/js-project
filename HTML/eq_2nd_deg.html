@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/equation.css">
+    <title>Projet | 2nd Degré</title>
+</head>
+<body>
+    <header>
+        <div class="header-link">
+            <div class="logo">Dhtml</div>
+            <div class="link">
+                <a href="../index.html">Accueil</a>
+                <a href="eq_lineaire.html">Cramer</a>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="container1">
+            <div class="title"><h2>Resolution d'une équation du 2nd degré</h2></div>
+            <div class="equation">
+                <label for="ax"><input type="text" name="ax" id="ax" required>x²</label>
+                <label for="bx">+<input type="text" name="bx" id="bx" required>x</label>
+                <label for="c">+<input type="text" name="c" id="c" required></label>
+                <label>= 0</label>
+            </div>
+            <button onclick="submitResult1()" class="otherButton">Resoudre</button>
+            <button onclick="clearFields()" class="otherButton">Effacer</button>
+            <div class="resultContainer1">
+                <textarea name="result" id="resultInput" cols="25" rows="2" style="resize: none;" disabled></textarea>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../JS/eq_2nd_deg.js"></script>
+</body>
+</html>

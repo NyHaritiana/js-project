@@ -1,0 +1,190 @@
+$font_family: Tahoma, sans-serif;
+$color_0: white;
+$color_1: #38A2D7;
+$color_2: #561139;
+$color_3: #a2d9ff;
+$color_4: #f3f4f5;
+
+html, body {
+    font-family: $font_family;
+    background-image: linear-gradient(to bottom right, $color_1, $color_2);
+    background-repeat: no-repeat;
+    animation: gradientAnimation 5s infinite;
+    text-align: center;
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 15px 0 0 0;
+    .title {
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    .title::before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2.5px;
+        background-color: white;
+        transition: width .2s ease;
+    }
+    .title:hover::before {
+        width: 100%;
+    }
+    .project-container {
+        display: none; 
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+    }
+    .projects-content {
+        position: relative;
+        background-color: whitesmoke;
+        margin: auto;
+        padding: 20px;
+        width: 80%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        animation-name: animatetop;
+        animation-duration: 0.4s;
+        .projects {
+            display: flex;
+            flex-direction: column;
+            a {
+                text-decoration: none;
+                font-size: 1.5em;
+                font-weight: bold;
+                color: $color_1;
+                margin: 0 auto 10px;
+                width: fit-content;
+            }
+            
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .close {
+        position: absolute;
+        background-color: #fefefe;
+        top: 5px;
+        right: 5px;
+        padding: 10px;
+        border: 1px solid #888;
+        width: 50px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1366px;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+
+    .animatedImage {
+        animation: imageAnimation 5s infinite;
+    }
+
+    
+
+    .description {
+        color: $color_0;
+    }
+
+    .text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1{
+            font-size: 3em;
+            font-weight: bold;
+            color: $color_0;
+            opacity: .8;
+        }
+        #text2 {
+            font-size: 2.5em;
+            opacity: .8;
+        }
+        h2 {
+            font-size: 2em;
+            font-weight: bold;
+            color: $color_0;
+            margin: 0;
+            opacity: .8;
+        }
+    }
+    .image-container {
+        position: relative;
+        background-color: rgb(228, 227, 227);
+    }
+    
+    .imageSlide {
+        position: absolute;
+        margin: 0 auto; 
+        padding-top: 20px;  
+
+    }
+}
+  
+@keyframes imageAnimation {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+}
+  
+
+#cursor {
+    display: inline-block;
+    width: 2px;
+    height: 3em;
+    font-weight: bold;
+    background-color: $color_0;
+    animation: cursorAnimation 1s infinite;
+}
+  
+@keyframes cursorAnimation {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+
+@media only screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+
+  }
+  
+

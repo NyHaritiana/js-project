@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="../CSS/equation.css">
+    <title>Projet | CRAMER</title>
+</head>
+<body>
+    <header>
+        <div class="header-link">
+            <div class="logo">Dhtml</div>
+            <div class="link">
+                <a href="../index.html">Accueil</a>
+                <a href="eq_2nd_deg.html">2<span>nd</span> Degre</a>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="container1">
+            <div class="title"><h2>Resolution d'une équation à 3 inconnues</h2></div>
+            <div id="reponse" class="reponse-container">
+                <div class="reponse-content">
+                    <span class="close">&times;</span>
+                    <h3>Infinité de Solution!</h3>
+                </div>
+            </div>
+            <div class="equationContainer">
+                <div class="equation1">
+                    <label for="inputx1"><input type="text" name="data" id="inputx1" required>x</label>
+                    <label for="inputy1">+<input type="text" name="data" id="inputy1" required>y</label>
+                    <label for="inputz1">+<input type="text" name="data" id="inputz1" required>z</label>
+                    <label>= <input type="text" name="data" id="inputAfterEqual1" required></label>
+                </div>
+                <div class="equation2">
+                    <label for="inputx2"><input type="text" name="data" id="inputx2" required>x</label>
+                    <label for="inputy2">+<input type="text" name="data" id="inputy2" required>y</label>
+                    <label for="inputz2">+<input type="text" name="data" id="inputz2" required>z</label>
+                    <label>= <input type="text" name="data" id="inputAfterEqual2" required></label>
+                </div>
+                <div class="equation3">
+                    <label for="inputx3"><input type="text" name="data" id="inputx3" required>x</label>
+                    <label for="inputy3">+<input type="text" name="data" id="inputy3" required>y</label>
+                    <label for="inputz3">+<input type="text" name="data" id="inputz3" required>z</label>
+                    <label>= <input type="text" name="data" id="inputAfterEqual3" required></label>
+                </div>
+            </div>
+            <button onclick="submitResult()">Resoudre</button>
+            <button onclick="clearFields()" class="otherButton">Effacer</button>
+            <div class="resultContainer">
+                <label for="xResult">x = <input type="text" id="xResult" disabled>,</label>
+                <label for="yResult">y = <input type="text" id="yResult" disabled>,</label>
+                <label for="zResult">z = <input type="text" id="zResult" disabled></label>
+            </div>
+        </div>
+    </div>
+
+    <script src="../JS/eq_lineaire.js"></script>
+</body>
+</html>
